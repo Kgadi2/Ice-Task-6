@@ -41,5 +41,20 @@ public class VowelCounter {
         
         return count;
     }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Prompt the user for input
+        System.out.println("Enter a sentence to count vowels:");
+        String input = sc.nextLine();
+
+        // Count vowels and display the result
+        int vowelCount = countVowels(input);
+        System.out.println("Number of vowels in the sentence: " + vowelCount);
+
+        // Close the scanner to prevent resource leak
+        sc.close();
+    }
 }
 
